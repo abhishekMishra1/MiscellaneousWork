@@ -1,0 +1,46 @@
+setup
+loop
+readDistance
+Distance: 40
+[23:10:01]runmotor: 4
+readMaxDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+maxDistance 747
+calculateTurningTime
+turningTime 4
+setTurningDirection
+turningDirection -1
+turning
+[23:10:01]runmotor: 1
+loop
+readDistance
+Distance: 246
+[23:10:01]runmotor: 1
+loop
+readDistance
+Distance: 17
+[23:10:01]runmotor: 4
+readMaxDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance
+readDistance

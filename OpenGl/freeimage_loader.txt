@@ -1,0 +1,22 @@
+BYTE* image;
+unsigned int width, height;
+void initializeImage(const char* filepath) {
+	//image format
+	FREE_IMAGE_FORMAT fif = FIF_UNKNOWN;
+	//pointer to the image, once loaded
+	FIBITMAP *dib = 0;
+	//check the file signature and deduce its format
+	fif = FreeImage_GetFileType(filepath, 0);
+	//if still unknown, try to guess the file format from the file extension
+	if (fif == FIF_UNKNOWN)
+		fif = FreeImage_GetFIFFromFilename(filepath);
+
+	dib = FreeImage_Load(fif, filepath, 0);
+	if (dib == NULL) {
+		printf("Unable to load image");
+		return;
+	}
+	image = FreeImage_GetBits(dib);
+	width = FreeImage_GetWidth(dib);
+	height = FreeImage_GetHeight(dib);
+}
